@@ -38,6 +38,11 @@ const routes = [
             requiresAuth: true,
         },
     },
+    {
+        path: "/",
+        name: "home",
+        component: () => import("@/views/home/Index.vue"),
+    },
 ];
 
 const router = createRouter({
