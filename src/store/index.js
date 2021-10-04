@@ -3,6 +3,7 @@ import auth from "./modules/auth";
 import order from "./modules/order";
 import category from "./modules/category";
 import slider from "./modules/slider";
+import product from "./modules/product";
 
 export default createStore({
     modules: {
@@ -10,5 +11,6 @@ export default createStore({
         order,
         category,
         slider,
+        product,
     },
 });

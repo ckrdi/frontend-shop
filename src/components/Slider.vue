@@ -10,7 +10,7 @@
                 <img
                     :src="slider.image"
                     class="d-block rounded-lg"
-                    style="max-height: 500px; max-width: 500px;"
+                    style="height: 517px; width: 918px;"
                 />
             </div>
         </div>
