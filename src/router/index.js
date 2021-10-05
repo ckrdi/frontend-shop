@@ -48,6 +48,16 @@ const routes = [
         name: "product_detail",
         component: () => import("@/views/product/Show.vue"),
     },
+    {
+        path: "/categories",
+        name: "categories",
+        component: () => import("@/views/category/Index.vue"),
+    },
+    {
+        path: "/category/:slug",
+        name: "category_detail",
+        component: () => import("@/views/category/Show.vue"),
+    },
 ];
 
 const router = createRouter({
