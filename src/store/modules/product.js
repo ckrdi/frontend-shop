@@ -4,10 +4,14 @@ const product = {
     namespaced: true,
     state: {
         products: [],
+        product: {},
     },
     mutations: {
         GET_PRODUCTS(state, products) {
             state.products = products;
+        },
+        PRODUCT_DETAIL(state, product) {
+            state.product = product;
         },
     },
     actions: {
@@ -18,8 +22,20 @@ const product = {
                 })
                 .catch((error) => console.log(error));
         },
+        getProductDetail({ commit }, slug) {
+            Api.get(`/product/${slug}`).then((response) => {
+                commit("PRODUCT_DETAIL", response.data.product);
+            });
+        },
     },
-    getters: {},
+    getters: {
+        allProducts(state) {
+            return state.products;
+        },
+        detailProduct(state) {
+            return state.product;
+        },
+    },
 };
 
 export default product;

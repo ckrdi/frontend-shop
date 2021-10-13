@@ -103,7 +103,7 @@ export default {
         });
 
         const products = computed(() => {
-            return store.state.product.products;
+            return store.getters["product/allProducts"];
         });
 
         return {
